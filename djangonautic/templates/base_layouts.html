@@ -9,6 +9,7 @@
     </head>
     <body>
         <div class="wrapper">
+            <h1><a href="{% url 'articles:list' %}"><img src="{% static 'django-sunset.jpg' %}" alt=""></a></h1>
             {% block content %}
             {% endblock %}
         </div>

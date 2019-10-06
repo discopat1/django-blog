@@ -10,4 +10,4 @@ def article_list(request):
     
 
 def article_detail(request, slug):
-    return HttpResponse()
+    return HttpResponse(slug)
