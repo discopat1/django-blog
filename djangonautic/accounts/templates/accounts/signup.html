@@ -1,8 +1,10 @@
 {% extends 'base_layouts.html' %}
 
 {% block content %}
-    <h1>Sign Up</h1>
-    <form class="site-form" action="accounts/signup" method="POST"></form>
-    {{ form }}
-    <input type="submit" value="Signup">
+    <h1>Signup</h1>
+    <form class="site-form" action="{% url 'accounts:signup' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Signup">
+    </form>
 {% endblock %}
